@@ -9,7 +9,13 @@ use App\Models\User;
 class HomeController extends Controller
 {
     //
+    public function index()
+    {
 
+        return view('home.userpage');
+    }
+
+    // for redirecting user to one dashbord and admin to the other dashboard
     public function redirect()
     {
         $usertype = Auth::user()->usertype;
